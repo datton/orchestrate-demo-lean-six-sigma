@@ -48,3 +48,6 @@
 .svc-free h2 { font-size: clamp(1.8rem, 4vw, 3rem); letter-spacing: -.03em; margin: 0 0 1rem; max-width: 22ch; }
 .svc-freelinks { list-style: none; margin: 0; padding: 0; display: grid; gap: .75rem; max-width: 65ch; }
 .svc-freelinks a { font-weight: 600; }
+
+/* layout.css centres each band child in 78rem; keep everything on the hero's left edge */
+.svc-hero > *, .svc-list > *, .svc-free > *, .svc-note > * { margin-inline: 0; }
