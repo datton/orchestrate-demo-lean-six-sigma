@@ -41,3 +41,11 @@
 @media (max-width: 52rem) { .sg-wrap { grid-template-columns: 1fr; } }
 @media (max-width: 26rem) { .sg-results { grid-template-columns: 1fr; } }
 @media (prefers-reduced-motion: reduce) { .sg-btn, .sg-results { transition: none; } }
+.sg-lead, .sg-table-wrap, .sg-table caption { margin-inline: 0; }
+.sg-table-wrap, .sg-table { max-width: 100%; }
+.sg-table td:last-child { text-align: left; }
+.sg-table thead th:last-child { text-align: left; }
+@media (max-width: 40rem) {
+  .sg-table th, .sg-table td { padding: .6rem .45rem; font-size: .95rem; }
+  .sg-table td:last-child, .sg-table thead th:last-child { display: none; }
+}

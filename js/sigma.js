@@ -86,7 +86,7 @@
       var r = calc(u, o, d);
       tween('dpu', cells.dpu, r.dpu, 3, '');
       tween('dpmo', cells.dpmo, r.dpmo, 0, '');
-      tween('yld', cells.yld, r.yieldPct, 4, ' %');
+      tween('yld', cells.yld, r.yieldPct, 3, ' %');
       var text;
       if (r.sigma == null) {
         setText(cells.sigma, r.dpo === 0 ? '6+' : '0');
