@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lean Six Sigma coaching, training and projects</title>
+<meta name="description" content="Fewer defects, less waste, clearer decisions: Lean Six Sigma training from Yellow to Black Belt, coaching and hands-on projects. A fictional demo firm; test payments only.">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/site.css">
+<link rel="stylesheet" href="css/shop/core.css">
+<link rel="stylesheet" href="css/shop/cart.css">
+<style>
+.hero{min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding-inline:max(1rem,5vw);padding-block:6rem 4rem;background:radial-gradient(60rem 30rem at 85% 10%,color-mix(in srgb,var(--accent) 22%,transparent),transparent 70%),var(--bg,#fff)}
+.hero h1{font-size:clamp(3rem,9vw,7rem);line-height:1;letter-spacing:-.04em;margin:0 0 1.5rem;max-width:16ch}
+.hero p.lead{font-size:clamp(1.1rem,2vw,1.5rem);max-width:55ch;margin:0 0 2rem;opacity:.85}
+.kinetic{background:linear-gradient(90deg,var(--accent),#e0a526,var(--accent));background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:sweep 6s linear infinite}
+@keyframes sweep{to{background-position:-200% 0}}
+.btn{display:inline-block;padding:.9rem 1.6rem;border-radius:999px;background:var(--accent);color:#fff;font-weight:600;text-decoration:none;transition:transform .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s;border:0;cursor:pointer;font-size:1rem}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(0,0,0,.2)}
+.btn--ghost{background:transparent;color:inherit;border:2px solid currentColor;margin-left:.75rem}
+h2.big{font-size:clamp(2.2rem,6vw,4.5rem);line-height:1.05;letter-spacing:-.03em;margin:0 0 2rem;max-width:18ch}
+.marquee{overflow:hidden;white-space:nowrap}
+.marquee span{display:inline-block;font-size:clamp(4rem,14vw,12rem);font-weight:800;letter-spacing:-.04em;animation:slide 40s linear infinite;padding-right:2rem}
+@keyframes slide{to{transform:translateX(-50%)}}
+.statement{font-size:clamp(1.8rem,4.5vw,3.6rem);line-height:1.2;letter-spacing:-.02em;max-width:26ch;margin:0}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,17rem),1fr));gap:1.25rem;margin:0;padding:0;list-style:none}
+.card{border-radius:1.25rem;padding:1.75rem;background:var(--surface,#f6f4f1);color:var(--text);box-shadow:0 6px 24px rgba(0,0,0,.07);display:flex;flex-direction:column;gap:.6rem;transition:transform .3s cubic-bezier(.2,.7,.2,1)}
+.card:hover{transform:translateY(-4px)}
+.card h3{margin:0;font-size:1.3rem}.card p{margin:0}
+.price{font-size:1.8rem;font-weight:700;letter-spacing:-.02em;margin-top:auto}
+.steps{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:3rem;align-items:start}
+.steps .word,.steps [data-step-word]{position:sticky;top:20vh;font-size:clamp(4rem,14vw,11rem);font-weight:800;letter-spacing:-.05em;line-height:1;color:var(--accent)}
+.steps .step{min-height:60vh;display:flex;align-items:center;font-size:clamp(1.5rem,3vw,2.5rem);line-height:1.25;max-width:22ch}
+.nums{display:grid;grid-template-columns:repeat(auto-fit,minmax(10rem,1fr));gap:2rem}
+.nums b{display:block;font-size:clamp(3rem,8vw,6rem);letter-spacing:-.04em;line-height:1}
+.tool{background:var(--surface,#f6f4f1);color:var(--text);border-radius:1.5rem;padding:clamp(1.25rem,3vw,2.5rem);box-shadow:0 6px 24px rgba(0,0,0,.07);max-width:44rem}
+.tool fieldset{border:0;padding:0;margin:0 0 1.25rem}.tool legend{font-weight:700;margin-bottom:.5rem}
+.tool label{display:flex;gap:.6rem;align-items:center;padding:.45rem 0;cursor:pointer}
+.tool input[type=checkbox],.tool input[type=radio]{width:1.2rem;height:1.2rem;accent-color:var(--accent)}
+.bar{height:.6rem;border-radius:999px;background:rgba(0,0,0,.12);overflow:hidden;margin:1rem 0}.bar i{display:block;height:100%;width:0;background:var(--accent);transition:width .5s cubic-bezier(.2,.7,.2,1)}
+.result{margin-top:1rem;font-weight:600}
+.band--dark .tool{background:#1c1c1c;color:#fff}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,20rem),1fr));gap:2rem;align-items:start}
+.note{font-size:.9rem;opacity:.75;max-width:65ch}
+.trust{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,16rem),1fr));gap:2rem}
+.trust h3{font-size:1.4rem;margin:0 0 .5rem}.trust p{margin:0;max-width:40ch}
+@media(max-width:700px){.steps{grid-template-columns:1fr}.steps .word,.steps [data-step-word]{position:static}.steps .step{min-height:auto;padding-block:1.5rem}.btn--ghost{margin:.75rem 0 0}}
+@media(prefers-reduced-motion:reduce){.kinetic,.marquee span{animation:none}}
+.h-steps [data-step-word]{overflow-wrap:normal;font-size:min(var(--fs-giant,11rem),10.5vw)}
+.steps [data-step-word]{overflow-wrap:normal;font-size:min(var(--fs-giant,11rem),10.5vw)}
+.hero h1{font-size:min(clamp(3rem,9vw,7rem),11.2vw);overflow-wrap:break-word}
+.tool input[type=number]{width:100%;padding:.6rem .8rem;border-radius:.6rem;border:1px solid rgba(0,0,0,.25);font:inherit;background:#fff;color:#111}
+.tool .row{display:grid;grid-template-columns:repeat(auto-fit,minmax(9rem,1fr));gap:1rem;margin-bottom:1rem}
+.tool .row label{display:block;font-weight:600;font-size:.95rem;padding:0}
+.tool .row label span{display:block;margin-bottom:.3rem}
+.sig{font-size:clamp(2.6rem,7vw,4.5rem);font-weight:800;letter-spacing:-.04em;line-height:1;color:var(--accent)}
+.slots{display:flex;flex-wrap:wrap;gap:.75rem;margin:1rem 0;padding:0;list-style:none}
+.slots a{display:inline-block;padding:.6rem 1rem;border-radius:.8rem;border:2px solid currentColor;text-decoration:none;font-weight:600}
+.slots a:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+@media(max-width:700px){.steps{grid-template-columns:minmax(0,1fr)}.steps [data-step-word]{font-size:min(var(--fs-giant,11rem),21vw)}}
+</style>
+<script src="js/shop/core.js" defer></script>
+<script src="js/shop/cart.js" defer></script>
+<script src="js/nav.js" defer></script>
+<script src="js/motion.js" defer></script>
+<script src="js/app.js" defer></script>
+</head>
+<body>
+<main id="main">
+
+<section class="hero" id="top">
+  <p class="note" data-reveal>Lean Six Sigma coaching, training and projects</p>
+  <h1 data-words>Fewer defects. Less waste. <span class="kinetic">Better decisions.</span></h1>
+  <p class="lead" data-reveal>We teach teams to measure how a process really performs, find the cause of the problem and fix it for good: from a first Yellow Belt course to a Black Belt project with a coach beside you.</p>
+  <p data-reveal><a class="btn" href="pages/services.html">See training and prices</a><a class="btn btn--ghost" href="pages/book.html">Book time with the team</a></p>
+</section>
+
+<section class="band band--dark" aria-label="What we work on">
+  <div class="marquee" data-marquee aria-hidden="true"><span>Define · Measure · Analyze · Improve · Control · Define · Measure · Analyze · Improve · Control · </span></div>
+</section>
+
+<section class="band" id="help">
+  <h2 class="big" data-words>What we help with</h2>
+  <ul class="cards">
+    <li class="card" data-reveal><h3>Training</h3><p>Yellow, Green and Black Belt courses that teach the method with real exercises, not slides alone.</p><a href="pages/services.html#training">Training options</a></li>
+    <li class="card" data-reveal><h3>Coaching</h3><p>A coach reviews your data, your charts and your plan while you run your own improvement.</p><a href="pages/services.html#coaching">Coaching options</a></li>
+    <li class="card" data-reveal><h3>Projects</h3><p>Bring us a process that costs too much or fails too often, and we work on it with your team.</p><a href="pages/services.html#projects">Project options</a></li>
+    <li class="card" data-reveal><h3>Guides</h3><p>Short written guides: DMAIC, the sigma calculator, choosing your belt and writing a project charter.</p><a href="#guides">Open the guides</a></li>
+  </ul>
+</section>
+
+<section class="band band--dark">
+  <p class="statement" data-fill>A good process is one you can measure. Lean takes out the waste, Six Sigma takes out the variation, and together they let a team show the improvement in numbers.</p>
+</section>
+
+<section class="band" id="services" aria-labelledby="svc-h">
+  <h2 class="big" id="svc-h" data-words>Services and prices</h2>
+  <ul class="cards" id="service-cards" aria-live="polite">
+    <li class="card"><h3>Loading services...</h3><p><a href="pages/services.html">Open the full services page</a></p></li>
+  </ul>
+  <p class="note" style="margin-top:1.5rem" data-reveal>Prices are in euros and come from our service list. This is a fictional firm and a demo: test payments only, no real money moves.</p>
+  <p data-reveal><a class="btn" href="pages/services.html">All services</a></p>
+</section>
+
+<section class="band band--dark" id="how">
+  <div class="steps h-steps" data-sticky-steps>
+    <div class="word" aria-hidden="true" data-step-word>Define</div>
+    <div>
+      <div class="step" data-step="Define">Define the problem and who it affects, in one clear sentence.</div>
+      <div class="step" data-step="Measure">Measure how the process performs today, with real data.</div>
+      <div class="step" data-step="Analyze">Analyze the data to find the cause, not the symptom.</div>
+      <div class="step" data-step="Improve">Improve: test a fix and see that the numbers move.</div>
+      <div class="step" data-step="Control">Control: keep the gain with a simple plan and a chart.</div>
+    </div>
+  </div>
+  <p data-reveal style="margin-top:3rem"><a class="btn" href="pages/guides/dmaic.html">Walk through DMAIC</a></p>
+</section>
+
+<section class="band" id="tools">
+  <h2 class="big" data-words>Two quick helpers</h2>
+  <div class="two">
+    <form class="tool" id="sigma" data-reveal aria-labelledby="s-h" novalidate>
+      <h3 id="s-h" style="margin-top:0">What is my sigma level?</h3>
+      <div class="row">
+        <label><span>Units checked</span><input type="number" name="units" min="1" step="1" value="500" inputmode="numeric"></label>
+        <label><span>Defects found</span><input type="number" name="defects" min="0" step="1" value="12" inputmode="numeric"></label>
+        <label><span>Chances for a defect per unit</span><input type="number" name="opps" min="1" step="1" value="3" inputmode="numeric"></label>
+      </div>
+      <p class="sig" id="sig-out" aria-live="polite">3.7</p>
+      <p class="result" id="sig-text" role="status"></p>
+      <p class="note">Uses the common convention with a 1.5 sigma shift. A quick estimate for orientation, not an audit. <a href="pages/guides/sigma-calculator.html">Open the full calculator</a></p>
+    </form>
+    <form class="tool" id="finder" data-reveal aria-labelledby="f-h">
+      <h3 id="f-h" style="margin-top:0">Which belt suits me?</h3>
+      <fieldset><legend>What do you want to do?</legend>
+        <label><input type="radio" name="goal" value="aware" checked> Understand the vocabulary and join improvement work</label>
+        <label><input type="radio" name="goal" value="lead"> Lead a small improvement project myself</label>
+        <label><input type="radio" name="goal" value="master"> Lead complex projects and coach others</label>
+      </fieldset>
+      <fieldset><legend>How much statistics have you used?</legend>
+        <label><input type="radio" name="stats" value="none" checked> Very little</label>
+        <label><input type="radio" name="stats" value="some"> Some: averages, charts, a little testing</label>
+      </fieldset>
+      <button class="btn" type="submit">Show me</button>
+      <p class="result" id="finder-out" role="status"></p>
+    </form>
+  </div>
+</section>
+
+<section class="band band--dark" id="book">
+  <h2 class="big" data-words>Talk it through with us</h2>
+  <p class="prose" data-reveal>Pick a time with the team to look at a process you want to improve. The next free slots are below; the booking page shows the whole month.</p>
+  <ul class="slots" id="slots" data-reveal aria-label="Next free slots"></ul>
+  <p class="note" id="mybook" data-reveal></p>
+  <p data-reveal><a class="btn" href="pages/book.html">Open the booking calendar</a></p>
+</section>
+
+<section class="band" id="trust">
+  <h2 class="big" data-words>Why trust us</h2>
+  <div class="trust">
+    <div data-reveal><h3>Method before slides</h3><p>Every course works through a real process, with data you can check yourself.</p></div>
+    <div data-reveal><h3>Plain prices</h3><p>The price you see is the price at checkout. No hidden extras.</p></div>
+    <div data-reveal><h3>Honest about limits</h3><p>Our guides are general information, not professional advice, and say so.</p></div>
+    <div data-reveal><h3>Yours to keep</h3><p>Bought guides unlock straight away in My purchases and stay there.</p></div>
+  </div>
+  <div class="nums" style="margin-top:4rem">
+    <div data-reveal><b data-count="5">5</b>phases in DMAIC</div>
+    <div data-reveal><b data-count="3">3</b>belt levels to start with</div>
+    <div data-reveal><b data-count="3">3</b>ways in: training, coaching, projects</div>
+  </div>
+</section>
+
+<section class="band band--dark" id="guides">
+  <h2 class="big" data-words>Start with the guides</h2>
+  <p class="prose" data-reveal>Two guides are free and two are paid. All four are short and written to be used.</p>
+  <ul class="cards">
+    <li class="card" data-reveal><h3>DMAIC explained</h3><p>The five phases with a running example. Free.</p><a href="pages/guides/dmaic.html">Read it</a></li>
+    <li class="card" data-reveal><h3>Sigma calculator</h3><p>From defects to sigma level and back. Free.</p><a href="pages/guides/sigma-calculator.html">Try it</a></li>
+    <li class="card" data-reveal><h3>Choose your belt</h3><p>Which level fits your role and goals.</p><a href="pages/guides/choose-your-belt.html">Details</a></li>
+    <li class="card" data-reveal><h3>Project charter</h3><p>Write the one page that starts a project well.</p><a href="pages/guides/project-charter.html">Details</a></li>
+  </ul>
+  <p class="guide-note" style="margin-top:2.5rem" data-reveal>General information only, not professional advice. Fictional demo firm; test payments only.</p>
+</section>
+
+</main>
+</body>
+</html>
