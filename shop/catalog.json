@@ -1,0 +1,260 @@
+{
+ "brand": {
+  "name": "Lean Six Sigma Studio",
+  "short": "LSS Studio",
+  "kind": "services",
+  "tagline": "Fictional demo studio: Lean Six Sigma training, coaching and projects"
+ },
+ "currency": "EUR",
+ "timezone": "Europe/Berlin",
+ "demo": true,
+ "stores": [],
+ "categories": [
+  {
+   "id": "training",
+   "name": "Training",
+   "blurb": "Yellow, Green and Black Belt courses, priced per seat"
+  },
+  {
+   "id": "coaching",
+   "name": "Coaching",
+   "blurb": "One-to-one time with a coach, priced per hour"
+  },
+  {
+   "id": "projects",
+   "name": "Projects",
+   "blurb": "A done-with-you improvement project"
+  },
+  {
+   "id": "guides",
+   "name": "Guides",
+   "blurb": "To read in your own time, unlocked under My purchases"
+  }
+ ],
+ "options": {
+  "format": {
+   "name": "Format",
+   "type": "one",
+   "required": true,
+   "choices": [
+    {
+     "id": "online",
+     "name": "Online, live",
+     "price": 0,
+     "default": true
+    },
+    {
+     "id": "in-person",
+     "name": "In person, at your site",
+     "price": 10000
+    }
+   ]
+  },
+  "materials": {
+   "name": "Extras",
+   "type": "many",
+   "required": false,
+   "choices": [
+    {
+     "id": "workbook",
+     "name": "Printed workbook",
+     "price": 2500
+    },
+    {
+     "id": "exam-retake",
+     "name": "One exam retake",
+     "price": 3000
+    }
+   ]
+  },
+  "sprint_scope": {
+   "name": "Scope",
+   "type": "one",
+   "required": true,
+   "choices": [
+    {
+     "id": "one-process",
+     "name": "One process",
+     "price": 0,
+     "default": true
+    },
+    {
+     "id": "two-processes",
+     "name": "Two linked processes",
+     "price": 10000
+    }
+   ]
+  },
+  "report": {
+   "name": "Handover",
+   "type": "one",
+   "required": true,
+   "choices": [
+    {
+     "id": "summary",
+     "name": "Written summary",
+     "price": 0,
+     "default": true
+    },
+    {
+     "id": "workshop",
+     "name": "Summary plus team workshop",
+     "price": 8000
+    }
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "yellow-belt",
+   "name": "Yellow Belt Training",
+   "category": "training",
+   "price": 19000,
+   "options": [
+    "format",
+    "materials"
+   ],
+   "desc": "Two days on the basics of Lean Six Sigma: how to see waste, read a process map and support an improvement team. A good start if you are new to it. Price per seat. Fictional demo offer.",
+   "includes": [
+    "Two days of live training",
+    "Course handbook as a download",
+    "Practice exercises with feedback",
+    "Certificate of attendance"
+   ],
+   "tags": [
+    "popular"
+   ],
+   "soldOut": false,
+   "badge": "Start here",
+   "perPerson": true
+  },
+  {
+   "id": "green-belt",
+   "name": "Green Belt Training",
+   "category": "training",
+   "price": 34000,
+   "options": [
+    "format",
+    "materials"
+   ],
+   "desc": "Five days to lead your own improvement project with the DMAIC method: measure a process, find causes with data and prove the fix worked. Price per seat. Fictional demo offer.",
+   "includes": [
+    "Five days of live training",
+    "Statistics workbook and templates",
+    "One project review session",
+    "Certificate of attendance"
+   ],
+   "tags": [],
+   "soldOut": false,
+   "perPerson": true
+  },
+  {
+   "id": "black-belt",
+   "name": "Black Belt Training",
+   "category": "training",
+   "price": 49000,
+   "options": [
+    "format",
+    "materials"
+   ],
+   "desc": "Ten days for people who coach teams and run larger projects: advanced statistics, experiment design and change leadership. Green Belt knowledge helps. Price per seat. Fictional demo offer.",
+   "includes": [
+    "Ten days of live training",
+    "Advanced templates",
+    "Two project review sessions",
+    "Certificate of attendance"
+   ],
+   "tags": [],
+   "soldOut": false,
+   "perPerson": true
+  },
+  {
+   "id": "coaching-hour",
+   "name": "Coaching Hour",
+   "category": "coaching",
+   "price": 12000,
+   "options": [
+    "format"
+   ],
+   "desc": "One hour with a coach on your own project: sharpen a charter, check your data or plan the next step. Book as many hours as you need. Price per hour. Fictional demo offer.",
+   "includes": [
+    "One hour, one coach",
+    "Notes sent to you afterwards",
+    "Questions welcome before the session"
+   ],
+   "tags": [],
+   "soldOut": false,
+   "perPerson": true
+  },
+  {
+   "id": "project-sprint",
+   "name": "Project Sprint",
+   "category": "projects",
+   "price": 49000,
+   "options": [
+    "sprint_scope",
+    "report"
+   ],
+   "desc": "A done-with-you improvement project: we work with your team through Define, Measure, Analyze, Improve and Control, and hand over a plan you can run on your own. Pick a time with the team on the booking page. Fictional demo offer.",
+   "includes": [
+    "Project charter with your team",
+    "Data collection plan",
+    "Analysis of the main causes",
+    "Improvement plan and control plan"
+   ],
+   "tags": [],
+   "soldOut": false,
+   "badge": "With your team"
+  },
+  {
+   "id": "choose-your-belt",
+   "name": "Guide: Choose your belt",
+   "category": "guides",
+   "price": 900,
+   "options": [],
+   "desc": "A short read on how Yellow, Green and Black Belt differ, and how to pick the one that fits your role. Unlocked under My purchases.",
+   "includes": [
+    "What each belt covers",
+    "Questions to ask yourself",
+    "Unlocked under My purchases"
+   ],
+   "tags": [],
+   "soldOut": false,
+   "guide": "pages/guides/choose-your-belt.html"
+  },
+  {
+   "id": "project-charter",
+   "name": "Guide: Write a project charter",
+   "category": "guides",
+   "price": 1200,
+   "options": [],
+   "desc": "How to write a one-page charter: problem, goal, scope and team, with an example you can adapt. Unlocked under My purchases.",
+   "includes": [
+    "Charter outline",
+    "Worked example",
+    "Unlocked under My purchases"
+   ],
+   "tags": [],
+   "soldOut": false,
+   "guide": "pages/guides/project-charter.html"
+  }
+ ],
+ "coupons": [
+  {
+   "code": "BELT10",
+   "name": "10% off your first order",
+   "type": "percent",
+   "value": 10,
+   "appliesTo": "order",
+   "maxDiscount": 9000,
+   "firstOrderOnly": true
+  },
+  {
+   "code": "TEAM50",
+   "name": "€50 off orders from €500",
+   "type": "amount",
+   "value": 5000,
+   "minSubtotal": 50000
+  }
+ ]
+}
