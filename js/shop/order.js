@@ -79,7 +79,8 @@
     root.innerHTML = '<p class="ord__eyebrow">Confirmation <span class="ord__badge">Demo</span></p><h1 class="ord__title">We cannot find this order</h1><div class="ord__error" role="alert">' + esc(msg) + '</div>' +
       '<span class="ord__test">' + esc((Shop.TEST_LABEL || 'Demo shop: test payments only. No real money moves.')) + '</span><div class="ord__actions"><button class="ord__btn" type="button" id="ord-retry">Try again</button><a class="ord__btn ord__btn--ghost" href="account.html">My purchases</a><a class="ord__btn ord__btn--ghost" href="services.html">Services</a></div>';
     var rt = document.getElementById('ord-retry');
-    if (rt) rt.addEventListener('click', function () { tries = 0; poll(); });
+    if (rt && !token) rt.remove();
+    else if (rt) rt.addEventListener('click', function () { tries = 0; poll(); });
   }
   function poll() {
     tries++;
