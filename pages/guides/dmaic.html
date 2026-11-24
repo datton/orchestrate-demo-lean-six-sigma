@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DMAIC explained: the five phases</title>
+<meta name="description" content="DMAIC in plain words: Define, Measure, Analyze, Improve, Control. Goal, tools, deliverable, example and a question for each phase, using one running example.">
+<style>@view-transition { navigation: auto; }</style>
+<link rel="stylesheet" href="../../css/tokens.css">
+<link rel="stylesheet" href="../../css/layout.css">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="stylesheet" href="../../css/shop/core.css">
+<link rel="stylesheet" href="../../css/dmaic.css">
+<script src="../../js/nav.js" defer></script>
+<script src="../../js/motion.js" defer></script>
+<script src="../../js/app.js" defer></script>
+<script src="../../js/shop/core.js" defer></script>
+<script src="../../js/shop/cart.js" defer></script>
+<script src="../../js/dmaic.js" defer></script>
+</head>
+<body>
+<main id="main">
+  <section class="band dm-hero">
+    <p class="dm-eyebrow" data-reveal>Free explainer</p>
+    <h1 data-words>DMAIC: five steps from problem to proof.</h1>
+    <p class="dm-lead" data-reveal>DMAIC is the backbone of a Lean Six Sigma project. Walk through the five phases below. One example runs through all of them: invoices that get paid late.</p>
+  </section>
+
+  <section class="band dm-sec" aria-labelledby="h-stepper">
+    <h2 id="h-stepper" data-reveal>Walk through the phases.</h2>
+    <p class="dm-hint" data-reveal>Pick a phase, or use the left and right arrow keys once a tab has focus.</p>
+    <div class="dm-stepper" id="dm-stepper">
+      <div class="dm-tabs" role="tablist" aria-label="DMAIC phases"><button type="button" role="tab" class="dm-tab" id="tab-0" aria-controls="panel-0" aria-selected="true" tabindex="0"><span class="dm-letter">D</span><span class="dm-name">Define</span></button><button type="button" role="tab" class="dm-tab" id="tab-1" aria-controls="panel-1" aria-selected="false" tabindex="-1"><span class="dm-letter">M</span><span class="dm-name">Measure</span></button><button type="button" role="tab" class="dm-tab" id="tab-2" aria-controls="panel-2" aria-selected="false" tabindex="-1"><span class="dm-letter">A</span><span class="dm-name">Analyze</span></button><button type="button" role="tab" class="dm-tab" id="tab-3" aria-controls="panel-3" aria-selected="false" tabindex="-1"><span class="dm-letter">I</span><span class="dm-name">Improve</span></button><button type="button" role="tab" class="dm-tab" id="tab-4" aria-controls="panel-4" aria-selected="false" tabindex="-1"><span class="dm-letter">C</span><span class="dm-name">Control</span></button></div>
+      <div class="dm-panels">
+      <section class="dm-panel" role="tabpanel" id="panel-0" aria-labelledby="tab-0">
+        <h3>1. Define</h3>
+        <p class="dm-goal"><strong>Goal.</strong> Agree what problem you are solving, for whom, and what success looks like.</p>
+        <dl class="dm-facts">
+          <div><dt>Key tools</dt><dd>Project charter, SIPOC, voice-of-the-customer notes</dd></div>
+          <div><dt>Typical deliverable</dt><dd>A one-page project charter with a problem statement, scope, goal and team.</dd></div>
+          <div class="dm-example"><dt>Late invoices example</dt><dd>Customers wait too long for invoices to be paid. Goal: cut late invoices from 22% to under 10% in six months.</dd></div>
+          <div><dt>Question to ask</dt><dd>Who is affected, and how will we know it is better?</dd></div>
+        </dl>
+      </section>
+      <section class="dm-panel" role="tabpanel" id="panel-1" aria-labelledby="tab-1">
+        <h3>2. Measure</h3>
+        <p class="dm-goal"><strong>Goal.</strong> Describe the current process with data, so everyone starts from facts, not feelings.</p>
+        <dl class="dm-facts">
+          <div><dt>Key tools</dt><dd>Process map, data collection plan, baseline measures, measurement checks</dd></div>
+          <div><dt>Typical deliverable</dt><dd>A baseline: how the process performs today, and confidence that the data can be trusted.</dd></div>
+          <div class="dm-example"><dt>Late invoices example</dt><dd>Count invoices sent and paid over the last 12 weeks. Result: 22% paid late, on average 9 days after the due date.</dd></div>
+          <div><dt>Question to ask</dt><dd>How do we know the numbers are right?</dd></div>
+        </dl>
+      </section>
+      <section class="dm-panel" role="tabpanel" id="panel-2" aria-labelledby="tab-2">
+        <h3>3. Analyze</h3>
+        <p class="dm-goal"><strong>Goal.</strong> Find the real causes of the problem and test them against the data.</p>
+        <dl class="dm-facts">
+          <div><dt>Key tools</dt><dd>Cause-and-effect diagram, 5 Whys, Pareto chart, simple statistical tests</dd></div>
+          <div><dt>Typical deliverable</dt><dd>A short list of verified root causes, ranked by impact.</dd></div>
+          <div class="dm-example"><dt>Late invoices example</dt><dd>A Pareto chart shows that two causes explain most late payments: wrong purchase-order numbers and invoices sent to the wrong contact.</dd></div>
+          <div><dt>Question to ask</dt><dd>Is this a cause we can prove, or just an opinion?</dd></div>
+        </dl>
+      </section>
+      <section class="dm-panel" role="tabpanel" id="panel-3" aria-labelledby="tab-3">
+        <h3>4. Improve</h3>
+        <p class="dm-goal"><strong>Goal.</strong> Try solutions aimed at the verified causes, and check that they work before rolling out.</p>
+        <dl class="dm-facts">
+          <div><dt>Key tools</dt><dd>Brainstorming, solution selection matrix, pilot, error-proofing</dd></div>
+          <div><dt>Typical deliverable</dt><dd>A tested solution with pilot results and a rollout plan.</dd></div>
+          <div class="dm-example"><dt>Late invoices example</dt><dd>A pilot adds a required purchase-order field and a check of the contact before sending. Late invoices in the pilot team drop to 8%.</dd></div>
+          <div><dt>Question to ask</dt><dd>What is the smallest test that would show this works?</dd></div>
+        </dl>
+      </section>
+      <section class="dm-panel" role="tabpanel" id="panel-4" aria-labelledby="tab-4">
+        <h3>5. Control</h3>
+        <p class="dm-goal"><strong>Goal.</strong> Make the gain last: standard work, simple monitoring and a clear owner.</p>
+        <dl class="dm-facts">
+          <div><dt>Key tools</dt><dd>Control chart, standard operating procedure, response plan, handover</dd></div>
+          <div><dt>Typical deliverable</dt><dd>A control plan and an owner who keeps watching the measure after the project closes.</dd></div>
+          <div class="dm-example"><dt>Late invoices example</dt><dd>A weekly chart of late invoices goes on the team board. If it passes 10%, the owner follows the response plan.</dd></div>
+          <div><dt>Question to ask</dt><dd>Who will notice if it starts slipping, and what will they do?</dd></div>
+        </dl>
+      </section>
+      </div>
+      <p class="dm-pager"><button type="button" class="dm-btn dm-btn--ghost" id="dm-prev">Previous phase</button> <button type="button" class="dm-btn" id="dm-next">Next phase</button></p>
+    </div>
+  </section>
+
+  <section class="band band--dark dm-sec dm-next-sec" aria-labelledby="h-next">
+    <h2 id="h-next" data-reveal>Ready to start your own project?</h2>
+    <p data-reveal>Every project begins with a good charter. Our paid guide, the Project Charter guide, walks you through writing one. This firm is fictional and the shop is a demo.</p>
+    <p class="dm-actions" data-reveal><a class="dm-btn" href="../services.html#project-charter">See the Project Charter guide</a> <a class="dm-btn dm-btn--ghost" href="../services.html">All services</a></p>
+    <p class="dm-test">Demo shop: test payments only, no real money moves.</p>
+  </section>
+
+  <section class="band dm-end">
+    <p class="guide-note" data-reveal>General information, not professional advice.</p>
+  </section>
+</main>
+</body>
+</html>

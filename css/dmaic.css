@@ -1,0 +1,38 @@
+/* dmaic.css (Senior Dev 5): DMAIC explainer. Tokens only. */
+.dm-hero { padding-block: clamp(6rem, 14vw, 11rem) clamp(3rem, 6vw, 5rem); background: var(--glow), linear-gradient(135deg, var(--accent-soft), var(--bg) 65%); }
+.dm-hero h1 { font-family: var(--font-display); font-size: var(--fs-h1); letter-spacing: var(--track-display); line-height: var(--lh-tight); max-width: 16ch; margin: 0 0 1.5rem; text-wrap: balance; }
+.dm-eyebrow { font-weight: 700; letter-spacing: .08em; text-transform: uppercase; font-size: var(--fs-sm); color: var(--accent-strong); margin: 0 0 1rem; }
+.dm-lead { font-size: var(--fs-lg); max-width: 60ch; }
+.dm-sec h2 { font-family: var(--font-display); font-size: var(--fs-h2); letter-spacing: var(--track-h2); line-height: var(--lh-tight); margin: 0 0 1.25rem; max-width: 18ch; text-wrap: balance; }
+.dm-hint { color: var(--text-muted); margin: 0 0 2rem; }
+.dm-tabs { display: none; }
+.dm-stepper.is-js .dm-tabs { display: grid; grid-template-columns: repeat(5, 1fr); gap: .5rem; margin-bottom: 1.5rem; max-width: 52rem; }
+.dm-tab { font: inherit; display: flex; flex-direction: column; align-items: center; gap: .15rem; padding: .75rem .25rem; border-radius: var(--radius-sm); border: 2px solid var(--line); background: var(--surface); color: var(--text); cursor: pointer; transition: transform .25s cubic-bezier(.2,.7,.2,1), background .2s, border-color .2s; min-width: 0; }
+.dm-tab:hover { transform: translateY(-2px); border-color: var(--accent); }
+.dm-tab[aria-selected="true"] { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+.dm-letter { font-family: var(--font-display); font-size: clamp(1.6rem, 5vw, 2.6rem); font-weight: 800; line-height: 1; }
+.dm-name { font-size: var(--fs-xs); font-weight: 700; overflow-wrap: anywhere; }
+.dm-panels { display: grid; gap: 1.25rem; max-width: 52rem; }
+.dm-panel { background: var(--surface); border-radius: var(--radius); padding: 1.5rem 1.75rem; box-shadow: var(--shadow); border-left: 8px solid var(--accent); }
+.dm-panel[hidden] { display: none; }
+.dm-panel h3 { margin: 0 0 .75rem; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: var(--lh-snug); }
+.dm-goal { font-size: var(--fs-lg); max-width: 60ch; margin: 0 0 1.25rem; }
+.dm-facts { display: grid; gap: .85rem; margin: 0; }
+.dm-facts dt { font-weight: 700; font-size: var(--fs-sm); text-transform: uppercase; letter-spacing: .06em; color: var(--accent-strong); }
+.dm-facts dd { margin: .15rem 0 0; max-width: 62ch; }
+.dm-example { background: var(--accent-soft); border-radius: var(--radius-sm); padding: .85rem 1rem; }
+.dm-panel, .dm-panel * { overflow-wrap: anywhere; }
+.dm-pager, .dm-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.5rem; }
+.dm-stepper:not(.is-js) .dm-pager { display: none; }
+.dm-btn { font: inherit; font-weight: 700; padding: .8rem 1.5rem; border-radius: var(--radius-pill); border: 2px solid var(--accent); background: var(--accent); color: var(--on-accent); cursor: pointer; text-decoration: none; display: inline-block; transition: transform .25s cubic-bezier(.2,.7,.2,1), background .2s; }
+.dm-btn:hover { transform: translateY(-2px); }
+.dm-btn:disabled { opacity: .5; cursor: not-allowed; transform: none; }
+.dm-btn--ghost { background: transparent; color: inherit; border-color: currentColor; }
+.band--dark .dm-btn { background: var(--accent-on-dark); border-color: var(--accent-on-dark); color: var(--dark); }
+.band--dark .dm-btn--ghost { background: transparent; color: var(--on-dark); border-color: var(--on-dark); }
+.dm-next-sec p { max-width: 62ch; font-size: var(--fs-lg); }
+.dm-test { font-size: var(--fs-sm); color: var(--on-dark-muted); }
+.dm-end { padding-block: 3rem; }
+.dm-tab:focus-visible, .dm-btn:focus-visible { outline: 3px solid var(--accent-strong); outline-offset: 3px; }
+@media (max-width: 40rem) { .dm-panel { padding: 1.25rem; } .dm-pager .dm-btn, .dm-actions .dm-btn { width: 100%; text-align: center; } }
+@media (prefers-reduced-motion: reduce) { .dm-tab, .dm-btn { transition: none; } }
