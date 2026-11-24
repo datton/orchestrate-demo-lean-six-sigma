@@ -34,7 +34,7 @@
     var opts = body === undefined ? {} : { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) };
     return fetch(API + path, opts).then(function (r) {
       return r.json().catch(function () { return {}; }).then(function (data) {
-        if (!r.ok || data.error) throw new Error(data.error || 'Etwas ist schiefgelaufen. Bitte versuche es noch einmal.');
+        if (!r.ok || data.error) throw new Error(data.error || 'Something went wrong. Please try again.');
         return data;
       });
     });
