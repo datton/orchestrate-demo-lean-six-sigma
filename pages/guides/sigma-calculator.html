@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Free sigma level and defect calculator</title>
+<meta name="description" content="Free calculator: enter units, opportunities and defects to get DPU, DPMO, yield and sigma level, with a sigma 1 to 6 reference table.">
+<style>@view-transition { navigation: auto; }</style>
+<link rel="stylesheet" href="../../css/tokens.css">
+<link rel="stylesheet" href="../../css/layout.css">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="stylesheet" href="../../css/shop/core.css">
+<link rel="stylesheet" href="../../css/sigma.css">
+<script src="../../js/nav.js" defer></script>
+<script src="../../js/motion.js" defer></script>
+<script src="../../js/app.js" defer></script>
+<script src="../../js/shop/core.js" defer></script>
+<script src="../../js/shop/cart.js" defer></script>
+<script src="../../js/sigma.js" defer></script>
+</head>
+<body>
+<main id="main">
+  <section class="band sg-hero">
+    <p class="sg-eyebrow" data-reveal>Free tool <span class="demo-label">Demo: fictional firm</span></p>
+    <h1 data-words>How good is your process, in sigma?</h1>
+    <p class="sg-lead" data-reveal>Count what you checked and what went wrong. We work out defects per unit, defects per million, yield and sigma level, live as you type.</p>
+  </section>
+
+  <section class="band sg-sec" aria-labelledby="h-calc">
+    <h2 id="h-calc">Your numbers</h2>
+    <div class="sg-wrap">
+      <form class="sg-card" id="sg-form" novalidate>
+        <div class="sg-field">
+          <label for="sg-units">Units checked <span class="sg-unit">(items, orders, forms, calls)</span></label>
+          <input id="sg-units" name="units" type="number" inputmode="numeric" min="1" step="1" value="500" required>
+          <p class="sg-help">The number of things you inspected.</p>
+        </div>
+        <div class="sg-field">
+          <label for="sg-opps">Opportunities per unit <span class="sg-unit">(ways it can go wrong)</span></label>
+          <input id="sg-opps" name="opps" type="number" inputmode="numeric" min="1" step="1" value="4" required>
+          <p class="sg-help">For an order form: wrong item, wrong address, wrong price, missing date = 4.</p>
+        </div>
+        <div class="sg-field">
+          <label for="sg-defects">Defects found <span class="sg-unit">(total)</span></label>
+          <input id="sg-defects" name="defects" type="number" inputmode="numeric" min="0" step="1" value="38" required>
+          <p class="sg-help">Every single miss counts, even several on one unit.</p>
+        </div>
+        <p class="sg-error" id="sg-error" role="alert" hidden></p>
+        <div class="sg-actions">
+          <button type="submit" class="sg-btn sg-btn--solid">Calculate</button>
+          <button type="button" class="sg-btn" id="sg-reset">Reset to example</button>
+        </div>
+        <p class="sg-note">Sample numbers shown. Nothing is sent anywhere: the maths runs in your browser.</p>
+      </form>
+
+      <div class="sg-card" aria-labelledby="h-res">
+        <h2 id="h-res">Results</h2>
+        <div aria-live="polite" aria-atomic="false">
+          <dl class="sg-results" id="sg-results">
+            <div class="sg-stat sg-stat--main"><dt>Sigma level</dt><dd id="sg-sigma">3.57</dd></div>
+            <div class="sg-stat"><dt>DPU (defects per unit)</dt><dd id="sg-dpu">0.076</dd></div>
+            <div class="sg-stat"><dt>DPMO (per million)</dt><dd id="sg-dpmo">19,000</dd></div>
+            <div class="sg-stat"><dt>Yield</dt><dd id="sg-yield">98.1000 %</dd></div>
+          </dl>
+          <p class="sg-reading" id="sg-reading">That is about 19,000 defects per million opportunities, a process yield of 98.10 % and a sigma level of about 3.6 (with the conventional 1.5 shift).</p>
+        </div>
+        <p class="sg-note">Sigma level uses the conventional 1.5 sigma shift: sigma = z(1 − DPMO ÷ 1,000,000) + 1.5. Without any defects there is no sigma level to calculate.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band band--dark sg-sec" aria-labelledby="h-ref">
+    <h2 id="h-ref" data-reveal>Sigma levels at a glance</h2>
+    <div class="sg-table-wrap">
+      <table class="sg-table" id="sg-table">
+        <caption>Reference table, with the 1.5 sigma shift</caption>
+        <thead><tr><th scope="col">Sigma level</th><th scope="col">DPMO</th><th scope="col">Yield</th><th scope="col">In plain words</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">1</th><td>691,462</td><td>30.85 %</td><td>About 7 in 10 chances fail</td></tr>
+          <tr><th scope="row">2</th><td>308,538</td><td>69.15 %</td><td>About 3 in 10 fail</td></tr>
+          <tr><th scope="row">3</th><td>66,807</td><td>93.32 %</td><td>About 1 in 15 fails</td></tr>
+          <tr><th scope="row">4</th><td>6,210</td><td>99.38 %</td><td>About 1 in 160 fails</td></tr>
+          <tr><th scope="row">5</th><td>233</td><td>99.977 %</td><td>About 1 in 4,300 fails</td></tr>
+          <tr><th scope="row">6</th><td>3.4</td><td>99.99966 %</td><td>About 1 in 294,000 fails</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="sg-links" data-reveal>
+      <a class="sg-btn" href="dmaic.html">Learn DMAIC, step by step</a>
+      <a class="sg-btn" href="../services.html">See training and coaching</a>
+    </p>
+  </section>
+
+  <section class="band">
+    <p class="guide-note" data-reveal>General information, not professional advice. Lean Six Sigma Demo Firm is fictional and its prices are demo prices; this is a demo shop with test payments only.</p>
+  </section>
+</main>
+</body>
+</html>
