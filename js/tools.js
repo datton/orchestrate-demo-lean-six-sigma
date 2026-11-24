@@ -160,7 +160,7 @@
   function ics(b) {
     var d = parse(b.date), st = b.start, en = b.start + b.len;
     function stamp(min) { return d.getFullYear() + pad(d.getMonth() + 1) + pad(d.getDate()) + 'T' + pad(Math.floor(min / 60)) + pad(min % 60) + '00'; }
-    function t(s) { return String(s).replace(/\\/g, '\\\\').replace(/;/g, '\;').replace(/,/g, '\\,').replace(/\r?\n/g, '\\n'); }
+    function t(s) { return String(s).replace(/\\/g, '\\\\').replace(/;/g, '\\;').replace(/,/g, '\\,').replace(/\r?\n/g, '\\n'); }
     var now = new Date(), dt = now.getUTCFullYear() + pad(now.getUTCMonth() + 1) + pad(now.getUTCDate()) + 'T' + pad(now.getUTCHours()) + pad(now.getUTCMinutes()) + pad(now.getUTCSeconds()) + 'Z';
     return ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Lean Six Sigma demo//Booking//EN', 'BEGIN:VEVENT', 'UID:' + b.id + '@lean-six-sigma.demo', 'DTSTAMP:' + dt,
       'DTSTART:' + stamp(st), 'DTEND:' + stamp(en), 'SUMMARY:' + t((b.len === 30 ? 'Discovery call' : 'Project session') + ' (demo booking)'),
