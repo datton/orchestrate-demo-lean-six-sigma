@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Book a call or project session</title>
+<meta name="description" content="Pick a free weekday slot for a 30-minute discovery call or a 60-minute project session. Sample availability; your booking stays in this browser.">
+<style>@view-transition { navigation: auto; }</style>
+<link rel="stylesheet" href="../css/tokens.css">
+<link rel="stylesheet" href="../css/layout.css">
+<link rel="stylesheet" href="../css/site.css">
+<link rel="stylesheet" href="../css/shop/core.css">
+<link rel="stylesheet" href="../css/booking.css">
+<script src="../js/nav.js" defer></script>
+<script src="../js/motion.js" defer></script>
+<script src="../js/app.js" defer></script>
+<script src="../js/shop/core.js" defer></script>
+<script src="../js/shop/cart.js" defer></script>
+<script src="../js/tools.js" defer></script>
+</head>
+<body>
+<main id="main">
+  <section class="band bk-hero">
+    <p class="bk-eyebrow" data-reveal>Book a call</p>
+    <h1 data-words>Find a time that suits your team</h1>
+    <p class="bk-lead" data-reveal>Choose a weekday, pick a slot, and tell us what you would like to work on. A 30-minute discovery call is the easiest way to start; a 60-minute project session goes deeper into one process.</p>
+    <p class="bk-note" data-reveal>Sample availability for this demo. Nothing is sent anywhere: your booking is saved in this browser only.</p>
+  </section>
+
+  <section class="band bk-tool" aria-labelledby="bk-h">
+    <h2 id="bk-h" class="bk-h2" data-reveal>Choose a day and time</h2>
+    <noscript><p class="bk-note">The booking calendar needs JavaScript. Please turn it on to pick a slot.</p></noscript>
+    <div class="bk-layout">
+      <div class="bk-cal" id="bk-cal" aria-label="Calendar"></div>
+      <div class="bk-side">
+        <div id="bk-slots" class="bk-slots" aria-live="polite"></div>
+        <form id="bk-form" class="bk-form" novalidate hidden>
+          <h3 class="bk-h3">Your details</h3>
+          <p class="bk-chosen" id="bk-chosen"></p>
+          <fieldset class="bk-types">
+            <legend>Session type</legend>
+            <label><input type="radio" name="type" value="30" checked> <span>Discovery call, 30 minutes</span></label>
+            <label><input type="radio" name="type" value="60"> <span>Project session, 60 minutes</span></label>
+          </fieldset>
+          <div class="bk-field"><label for="bk-name">Your name</label><input id="bk-name" name="name" autocomplete="name" required><p class="bk-err" id="bk-name-err" hidden></p></div>
+          <div class="bk-field"><label for="bk-email">Email address</label><input id="bk-email" name="email" type="email" autocomplete="email" required><p class="bk-err" id="bk-email-err" hidden></p></div>
+          <div class="bk-field"><label for="bk-topic">Topic</label>
+            <select id="bk-topic" name="topic"><option value="training">Training</option><option value="coaching">Coaching</option><option value="project">Improvement project</option></select></div>
+          <div class="bk-field"><label for="bk-note">Note (optional)</label><textarea id="bk-note" name="note" rows="3" maxlength="400"></textarea></div>
+          <button class="btn" type="submit">Book this slot</button>
+          <p class="bk-note">Demo only: nothing is sent. Your booking stays in this browser.</p>
+        </form>
+        <div id="bk-done" class="bk-done" tabindex="-1" role="status" hidden></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band band--dark" aria-labelledby="bk-mine-h">
+    <h2 id="bk-mine-h" class="bk-h2" data-reveal>Your bookings</h2>
+    <div id="bk-mine" class="bk-mine"><p>No bookings yet.</p></div>
+    <p class="bk-note">General information, not professional advice. Demo firm: sample availability, nothing is really booked.</p>
+  </section>
+</main>
+</body>
+</html>
